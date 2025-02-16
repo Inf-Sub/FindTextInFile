@@ -6,10 +6,10 @@ def find_text_in_file(file_path, search_text, search_number):
                 if char == search_text:
                     count_char += 1
                     if count_char == search_number:
-                        print(f"157th '{search_text}' found at line {line_number}, position {position}")
+                        print(f"{search_number}th '{search_text}' found at line {line_number}, position {position}")
                         return line_number, position
     
-    print("{search_number}th '{search_text}' not found.")
+    print(f"{search_number}th '{search_text}' not found.")
     return None
 
 
