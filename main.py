@@ -1,0 +1,16 @@
+def find_text_in_file(file_path, search_text, search_number):
+    count_h = 0
+    with open(file_path, 'r', encoding='utf-8') as file:
+        for line_number, line in enumerate(file, start=1):
+            for position, char in enumerate(line):
+                if char == search_text:
+                    count_h += 1
+                    if count_h == search_number:
+                        print(f"157th '{search_text}' found at line {line_number}, position {position}")
+                        return line_number, position
+    
+    print("157th 'H' not found.")
+    return None
+
+
+find_text_in_file('puzzle_data.txt', 'H', 157)
