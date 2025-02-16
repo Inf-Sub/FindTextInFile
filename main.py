@@ -9,7 +9,7 @@ def find_text_in_file(file_path, search_text, search_number):
                         print(f"157th '{search_text}' found at line {line_number}, position {position}")
                         return line_number, position
     
-    print("157th '{search_text}' not found.")
+    print("{search_number}th '{search_text}' not found.")
     return None
 
 
